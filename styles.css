@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    width: 150px;
+    padding: 5px;
+    align-self: center;
+    border-radius: 10px;
+    border: 1px aqua solid;
+    background-color: aqua;
+    font-weight: bolder;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+body{
+    line-height: 1.5;
+    background-color: aqua;
+}
+
+.container{
+    width: min(95%,1100px);
+    margin: 0 auto;
+}
+
+header{
+    background-color: blue;
+    height: 5vh;
+    color: #ffffff;
+}
+
+header>div{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>div>div:last-of-type{
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+}
+
+header>div>div:last-of-type>ul{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    max-width: 50%;
+    gap: 20px;
+}
+
+main>div>h1{
+    text-align: center;
+}
+
+main>div>div:first-of-type{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    border: #ffffff solid;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+main>div>div>div{
+    width: 45%;
+    height: 250px;
+    border: solid;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+main>div>div>div:last-of-type{
+    justify-content: center;
+}
+
+main>div>div>div>h2{
+    text-align:center;
+    text-decoration: underline 3px;
+}
+
+main>div>div>div>div{
+    height: 50%;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+form{
+    display: none;
+    position: fixed;
+    top: 12vh;
+    left: 15vw;
+    background-color: #ffffff;
+    border: solid 1px;
+    border-radius: 15px;
+}
+
+fieldset{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    width: 60vw;
+    height: 60vh;
+    padding: 15px;
+    border: none;
+}
+
+fieldset>div:last-of-type{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+fieldset input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid;
+    font-size: large;
+}
+
+label{
+    font-size: large;
+    font-weight: 600;
+}
+
+legend{
+    text-align: center;
+    width: 100%;
+    font-size: xx-large;
+    font-weight: 700;
+
+}
+
+fieldset>div:first-of-type{
+    display: flex;
+    gap: 10%;
+    align-items: center;
+}
+
+fieldset>div>button:first-of-type{
+    background-color: rgb(245, 53, 53);
+    border-color: rgb(245, 53, 53);
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CZAR LIBRARY</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div>
+          <p>LOGO</p>
+        </div>
+        <div>
+          <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h1>WELCOME TO CZAR LIBRARY</h1>
+        <div class="library">
+          <div>
+            <h2>NO SWEETNESS HERE</h2>
+            <div>
+              <p>AUTHOR: AMA ATTA AIDOO</p>
+              <p>PAGES: 230</p>
+              <p>STATE: READ</p>
+            </div>
+          </div>
+          <div>
+            <h2>THE KAYA-GIRL</h2>
+            <div>
+              <p>AUTHOR: MAMLE WOLO</p>
+              <p>PAGE: 160</p>
+              <p>STATE: UNREAD</p>
+            </div>
+          </div>
+          <div>
+            <h2>THE SON OF UMBELE</h2>
+            <div>
+              <p>AUTHOR: BILL MARSHALL</p>
+              <p>PAGES: 78</p>
+              <p>STATE: UNREAD</p>
+            </div>
+          </div>
+          <div><button>ADD A BOOK</button></div>
+        </div>
+        <div>
+          <form action="push">
+            <fieldset>
+              <legend>ADD A BOOK</legend>
+              <label for="Title">TITLE: </label>
+              <input type="text" id="Title" />
+              <label for="Author">AUTHOR: </label>
+              <input type="text" id="Author" />
+              <label for="Pages">PAGES: </label>
+              <input type="text" id="Pages" />
+              <div>
+                <label for="State">STATE: </label>
+                <div>
+                  <div>
+                    <input type="radio" name="State" id="Unread" />
+                    <label for="Unread">Unread</label>
+                  </div>
+                  <div>
+                    <input type="radio" name="State" id="Reading" />
+                    <label for="Reading">Reading</label>
+                  </div>
+                  <div>
+                    <input type="radio" name="State" id="Read" />
+                    <label for="Read">Read</label>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button type="reset">CANCEL</button>
+                <button type="submit">ADD</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
