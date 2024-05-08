@@ -2,8 +2,16 @@ const form = document.querySelector("form");
 const bookBtn = document.querySelector("main>div>div:first-of-type button");
 const cancelBtn = document.querySelector("main>div>div:last-of-type button:first-of-type");
 const submitBtn = document.querySelector("main>div>div:last-of-type button:last-of-type");
-const books = document.querySelectorAll("main>div>div>div")
-let Library = Array.from(books) 
+const bookDiv = document.querySelector(".add")
+// let books = document.querySelectorAll("main>div>div>div");
+// let bookLength = books.length;
+// const bok = books[0];
+const container = document.querySelector("main>div>div:nth-of-type(2)")
+document.querySelector("main>div>div>div")
+const Library = [];
+const title = document.querySelector("form input:first-of-type");
+const author = document.querySelector("form input:nth-of-type(2)");
+const pages = document.querySelector("form input:nth-of-type(3)");
 
 // display form to add book
 bookBtn.addEventListener("click", () => {
@@ -19,6 +27,7 @@ cancelBtn.addEventListener("click", () => {
     }
 })
 
+// Book object construct
 function Book(name,author,pages,state){
     this.name = name;
     this.author = author;
@@ -26,8 +35,75 @@ function Book(name,author,pages,state){
     this.state = state;
 }
 
+// function AddBoo
 
+function AddBook(name,author,pages,state){
+    Book.call(this,name,author,pages,state)
+    const cont = document.createElement("div");
+    const h2 = document.createElement("h2");
+    h2.innerText = this.name;
+    cont.appendChild(h2);
+    const detail = document.createElement("div")
+    const p1 = document.createElement("p");
+    const p2 = document.createElement("p");
+    const p3 = document.createElement("p");
+    const button = document.createElement("button");
+    button.innerText = "REMOVE";
+    button.style.backgroundColor = "blue";
+    button.style.borderColor = "blue";
+    button.style.color = "#ffffff";
+    button.addEventListener("click", () => {
+        container.removeChild(cont)
+    })
+    p1.innerText = "AUTHOR: " + this.author;
+    p2.innerText = "PAGES: " + this.pages;
+    p3.innerText = "STATE: " + this.state;
+    detail.appendChild(p1);
+    detail.appendChild(p2);
+    detail.appendChild(p3);
+    cont.appendChild(detail);
+    cont.appendChild(button);
+    cont.classList.add(this.state);
+    this.joinBook = function(){
+    container.appendChild(cont);
+    }
+}
+AddBook.prototype = Object.create(Book.prototype);
 
-submitBtn.addEventListener("click",() => {
-
+//add default books
+window.addEventListener("load",() => {
+    const bookA = new AddBook("NO SWEETNESS HERE","AMA ATTA AIDOO",230,"READ");
+    bookA.joinBook();
+    Library.push(bookA)
+    const bookB = new AddBook("THE KAYA-GIRL","MAMLE WOLO",160,"UNREAD");
+    bookB.joinBook();
+    Library.push(bookB)
+    const bookC = new AddBook("THE SON OF UMBELE","BILL MARSHALL",78,"UNREAD");
+    bookC.joinBook()
+    Library.push(bookC)
 })
+
+
+
+//form submit button
+submitBtn.addEventListener("click",(event) => {
+    event.preventDefault();
+    const state = document.querySelector("fieldset>div input:checked");
+    const book1 = new AddBook(title.value,author.value,pages.value,state.value);
+    book1.joinBook();
+    Library.push(book1);
+    if(form.style.display = "block"){
+        form.style.display = "none";
+    }
+    title.value = "";
+    author.value = "";
+    pages.value = "";
+    state.value = "";
+    // if (books[bookLength- 1] !== bookDiv) {
+
+    // }
+})
+
+// console.log(Library)
+
+//make elements
