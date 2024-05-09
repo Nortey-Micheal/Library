@@ -199,6 +199,10 @@ fieldset>div>button:first-of-type{
     color: black;
 }
 
+fieldset>div>button:last-of-type{
+    color: black;
+}
+
 @media screen and (max-width: 678px) {
     form{
         left: 2vw;
