@@ -144,6 +144,7 @@ form{
     background-color: #ffffff;
     border: solid 1px;
     border-radius: 15px;
+    min-width: 350px;
 }
 
 .stateCont{
@@ -204,7 +205,6 @@ fieldset>div>button:first-of-type{
         left: 2vw;
     }
     .add{
-        /* background-color: coral; */
         right: 0.1vw;
         bottom: 0.1vh;
         width: 130px;
