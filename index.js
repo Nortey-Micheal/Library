@@ -131,7 +131,8 @@ window.addEventListener("load",() => {
     Library.push(bookB)
     const bookC = new AddBook("THE SON OF UMBELE","BILL MARSHALL",78,"UNREAD");
     bookC.joinBook()
-    Library.push(bookC)
+    Library.push(bookC);
+    alert("Change the state of the books by clicking on the corresponding button");
 })
 
 
