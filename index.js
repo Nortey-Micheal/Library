@@ -47,6 +47,7 @@ function Book(name,author,pages,state){
 function AddBook(name,author,pages,state){
     Book.call(this,name,author,pages,state)
     const cont = document.createElement("div");
+    cont.style.minWidth = "310px";
     const h2 = document.createElement("h2");
     h2.innerText = this.name;
     // h2.pr

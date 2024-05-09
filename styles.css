@@ -22,11 +22,13 @@ button{
 body{
     line-height: 1.5;
     /* background-color: aqua; */
+        min-width: 380px;
 }
 
 .container{
     width: min(95%,1100px);
     margin: 0 auto;
+
 }
 
 header{
