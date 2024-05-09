@@ -35,6 +35,13 @@ function Book(name,author,pages,state){
     this.state = state;
 }
 
+//
+// Book.prototype.checkSt = function(button) {
+//     button.addEventListener("click", () => {
+//         p3.innerText = "STATE: " + button.innerText;
+//     })
+// }
+
 // function AddBoo
 
 function AddBook(name,author,pages,state){
@@ -42,6 +49,7 @@ function AddBook(name,author,pages,state){
     const cont = document.createElement("div");
     const h2 = document.createElement("h2");
     h2.innerText = this.name;
+    // h2.pr
     cont.appendChild(h2);
     const detail = document.createElement("div")
     const p1 = document.createElement("p");
@@ -51,13 +59,10 @@ function AddBook(name,author,pages,state){
     button.innerText = "REMOVE";
     const read = document.createElement("button")
     read.innerText = "READ";
-    // read.name = "STATE";
     const Unread = document.createElement("button")
     Unread.innerText = "UNREAD";
-    // Unread.name = "STATE";
     const reading = document.createElement("button")
     reading.innerText = "READING";
-    // reading.name = "STATE";
     const radios = document.createElement("div");
     radios.appendChild(Unread);
     radios.appendChild(read);
@@ -95,6 +100,24 @@ function AddBook(name,author,pages,state){
     this.joinBook = function(){
     container.appendChild(cont);
     }
+    read.addEventListener("click", () => {
+        p3.innerText = "STATE: " + read.innerText;
+        cont.classList.replace(this.state,read.innerText);
+        this.state = read.innerText;
+    })
+    Unread.addEventListener("click", () => {
+        p3.innerText = "STATE: " + Unread.innerText;
+        cont.classList.replace(this.state,Unread.innerText)
+        this.state = Unread.innerText;
+    })
+    reading.addEventListener("click", () => {
+        p3.innerText = "STATE: " + reading.innerText;
+        cont.classList.replace(this.state,reading.innerText)
+        this.state = reading.innerText;
+    })
+    // this.checkSt(read);
+    // this.checkSt(Unread);
+    // this.checkSt(reading);
 }
 AddBook.prototype = Object.create(Book.prototype);
 
