@@ -21,7 +21,6 @@ button{
 
 body{
     line-height: 1.5;
-    /* background-color: aqua; */
     min-width: 380px;
     color: black;
 }
@@ -76,7 +75,6 @@ main>div>h1{
     height: 50px;
     bottom: 5vh;
     right: 3vw;
-    /* background-color: aqua; */
     border: none;
     box-shadow: none;
 }
@@ -92,7 +90,6 @@ main>div>div:nth-of-type(2){
     display: flex;
     flex-flow: row wrap;
     gap: 30px;
-    /* border: #ffffff solid; */
     padding: 15px;
     border-radius: 20px;
 }
@@ -100,7 +97,6 @@ main>div>div:nth-of-type(2){
 main>div>div>div{
     width: min(80%,400px);
     height: 300px;
-    /* border: solid; */
     box-shadow: 3px 3px 6px rgb(83, 83, 238);
     border-radius: 15px;
     padding: 10px;
@@ -153,7 +149,6 @@ form{
 .stateCont{
     display: flex;
     gap: 30px;
-    /* align-items: center; */
 }
 
 fieldset{
@@ -199,11 +194,8 @@ fieldset>div:first-of-type{
 }
 
 fieldset>div>button:first-of-type{
-    /* background-color: rgb(245, 53, 53); */
-    background-color: rgb(201, 48, 48);
-    /* border-color: rgb(245, 53, 53); */
-    border-color: rgb(201, 48, 48);
-    color: #ffffff;
+    background-color: lightcoral;
+    border-color: lightcoral;
 }
 
 @media screen and (max-width: 678px) {
