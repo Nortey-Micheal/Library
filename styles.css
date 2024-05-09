@@ -22,7 +22,8 @@ button{
 body{
     line-height: 1.5;
     /* background-color: aqua; */
-        min-width: 380px;
+    min-width: 380px;
+    color: black;
 }
 
 .container{
@@ -198,8 +199,11 @@ fieldset>div:first-of-type{
 }
 
 fieldset>div>button:first-of-type{
-    background-color: rgb(245, 53, 53);
-    border-color: rgb(245, 53, 53);
+    /* background-color: rgb(245, 53, 53); */
+    background-color: rgb(201, 48, 48);
+    /* border-color: rgb(245, 53, 53); */
+    border-color: rgb(201, 48, 48);
+    color: #ffffff;
 }
 
 @media screen and (max-width: 678px) {
