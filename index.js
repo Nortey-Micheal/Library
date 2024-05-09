@@ -49,8 +49,35 @@ function AddBook(name,author,pages,state){
     const p3 = document.createElement("p");
     const button = document.createElement("button");
     button.innerText = "REMOVE";
-    button.style.backgroundColor = "blue";
-    button.style.borderColor = "blue";
+    const read = document.createElement("button")
+    read.innerText = "READ";
+    // read.name = "STATE";
+    const Unread = document.createElement("button")
+    Unread.innerText = "UNREAD";
+    // Unread.name = "STATE";
+    const reading = document.createElement("button")
+    reading.innerText = "READING";
+    // reading.name = "STATE";
+    const radios = document.createElement("div");
+    radios.appendChild(Unread);
+    radios.appendChild(read);
+    radios.appendChild(reading);
+    radios.style.display = "flex";
+    radios.style.flexDirection = "row";
+    radios.style.gap = "10px";
+    radios.style.height = "50px";
+    radios.style.marginBottom = "5px";
+    read.style.backgroundColor = "#ffffff";
+    read.style.borderColor = "#ffffff";
+    Unread.style.backgroundColor = "#ffffff";
+    Unread.style.borderColor = "#ffffff";
+    reading.style.backgroundColor = "#ffffff";
+    reading.style.borderColor = "#ffffff";
+    read.style.color = "rgb(3, 119, 81)";
+    Unread.style.color = "lightcoral";
+    reading.style.color = "rgb(42, 124, 231)";
+    button.style.backgroundColor = "rgb(83, 83, 238)";
+    button.style.borderColor = "rgb(83, 83, 238)";
     button.style.color = "#ffffff";
     button.addEventListener("click", () => {
         container.removeChild(cont)
@@ -62,6 +89,7 @@ function AddBook(name,author,pages,state){
     detail.appendChild(p2);
     detail.appendChild(p3);
     cont.appendChild(detail);
+    cont.appendChild(radios);
     cont.appendChild(button);
     cont.classList.add(this.state);
     this.joinBook = function(){
